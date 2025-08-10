@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0b3ommgpn2m2"]
+
+[ext_resource type="Script" uid="uid://ce2bxhh6c01aq" path="res://scripts/credits.gd" id="1_al82v"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="2_tlwrt"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_g618n"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="4_t4hkn"]
+[ext_resource type="Texture2D" uid="uid://t5txvxvchhc3" path="res://assets/art/lablevelbackground.png" id="5_jka11"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_al82v")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 853.0
+texture = ExtResource("5_jka11")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 429.0
+offset_top = 110.0
+offset_right = 744.0
+offset_bottom = 502.0
+scale = Vector2(1, 1.218)
+theme_override_styles/panel = ExtResource("2_tlwrt")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 434.0
+offset_top = 142.0
+offset_right = 740.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_g618n")
+theme_override_font_sizes/font_size = 40
+text = "Credits:"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 445.0
+offset_top = 198.0
+offset_right = 729.0
+offset_bottom = 576.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_g618n")
+theme_override_fonts/italics_font = ExtResource("3_g618n")
+theme_override_fonts/bold_font = ExtResource("3_g618n")
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[i]This game was made as part of the Massachusetts Institute of Technology CMS.590: Design and Development of Games for Learning class. [/i] 
+
+[b]Contributors:[/b]
+Julia Fortt
+Kent Brought
+Konstantina Rasvani
+Kidus Yohannes"
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="CanvasLayer"]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 150.0
+offset_bottom = 100.0
+theme = ExtResource("4_t4hkn")
+text = "Menu"
+
+[connection signal="pressed" from="CanvasLayer/MenuButton" to="." method="_on_menu_button_pressed"]

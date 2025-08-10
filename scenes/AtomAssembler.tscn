@@ -1,0 +1,289 @@
+[gd_scene load_steps=12 format=3 uid="uid://cy8kfvob6180f"]
+
+[ext_resource type="Script" uid="uid://du3gc74e7p6hp" path="res://scripts/atom_assembler.gd" id="1_yqg2x"]
+[ext_resource type="Texture2D" uid="uid://bmb6c7tiba0pw" path="res://assets/art/atomassemblerbgtemp.png" id="2_yqg2x"]
+[ext_resource type="Texture2D" uid="uid://fbgrj4y2yokf" path="res://assets/art/proton.png" id="3_3752f"]
+[ext_resource type="Texture2D" uid="uid://duwo01g2oq661" path="res://assets/art/panel.png" id="3_yqg2x"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="4_np5r3"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_5dn1n"]
+[ext_resource type="Script" uid="uid://c1jje0fl4pjqo" path="res://scripts/add_atom_component_button.gd" id="7_cs70e"]
+[ext_resource type="Texture2D" uid="uid://v4fdbxbl52a7" path="res://assets/art/neutron.png" id="8_m02th"]
+[ext_resource type="Texture2D" uid="uid://cw4lukm3b7flj" path="res://assets/art/electron.png" id="9_5lhjy"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="10_ly6pu"]
+[ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scripts/debug_button.gd" id="11_dvb2t"]
+
+[node name="AtomAssembler" type="Node2D"]
+script = ExtResource("1_yqg2x")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1536.0
+offset_bottom = 1026.0
+scale = Vector2(0.835641, 0.835641)
+texture = ExtResource("2_yqg2x")
+metadata/_edit_use_anchors_ = true
+
+[node name="InputBackground" type="Sprite2D" parent="."]
+position = Vector2(185, 332)
+scale = Vector2(0.510386, 0.465)
+texture = ExtResource("3_yqg2x")
+region_rect = Rect2(22.31, 0, 238.207, 827.883)
+
+[node name="Protons" type="Node2D" parent="."]
+
+[node name="ProtonSource" type="TextureButton" parent="Protons"]
+offset_left = 78.7162
+offset_top = 177.618
+offset_right = 259.716
+offset_bottom = 362.618
+scale = Vector2(0.363646, 0.348512)
+texture_normal = ExtResource("3_3752f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Count" type="Label" parent="Protons"]
+offset_left = 170.0
+offset_top = 172.0
+offset_right = 278.0
+offset_bottom = 221.0
+scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
+text = "Protons:
+0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AddAtomComponentButton2" type="Button" parent="Protons"]
+offset_left = 160.0
+offset_top = 212.0
+offset_right = 210.0
+offset_bottom = 244.0
+theme = ExtResource("6_5dn1n")
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Protons"]
+offset_left = 220.0
+offset_top = 211.0
+offset_right = 270.0
+offset_bottom = 243.0
+theme = ExtResource("6_5dn1n")
+text = "-"
+script = ExtResource("7_cs70e")
+
+[node name="Neutrons" type="Node2D" parent="."]
+
+[node name="NeutronSource" type="TextureButton" parent="Neutrons"]
+offset_left = 81.0
+offset_top = 298.0
+offset_right = 262.0
+offset_bottom = 498.0
+scale = Vector2(0.326273, 0.312695)
+texture_normal = ExtResource("8_m02th")
+metadata/_edit_use_anchors_ = true
+
+[node name="Count" type="Label" parent="Neutrons"]
+offset_left = 170.0
+offset_top = 297.0
+offset_right = 291.0
+offset_bottom = 346.0
+scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
+text = "Neutrons:
+0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AddAtomComponentButton2" type="Button" parent="Neutrons"]
+offset_left = 160.0
+offset_top = 335.0
+offset_right = 210.0
+offset_bottom = 367.0
+theme = ExtResource("6_5dn1n")
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Neutrons"]
+offset_left = 220.0
+offset_top = 335.0
+offset_right = 270.0
+offset_bottom = 367.0
+theme = ExtResource("6_5dn1n")
+text = "-"
+script = ExtResource("7_cs70e")
+
+[node name="Electrons" type="Node2D" parent="."]
+
+[node name="ElectronSource" type="TextureButton" parent="Electrons"]
+offset_left = 79.0
+offset_top = 414.0
+offset_right = 260.0
+offset_bottom = 599.0
+scale = Vector2(0.368308, 0.35298)
+texture_normal = ExtResource("9_5lhjy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Count" type="Label" parent="Electrons"]
+offset_left = 170.0
+offset_top = 414.0
+offset_right = 289.0
+offset_bottom = 463.0
+scale = Vector2(0.817455, 0.783436)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_np5r3")
+text = "Electrons:
+0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AddAtomComponentButton2" type="Button" parent="Electrons"]
+offset_left = 160.0
+offset_top = 452.0
+offset_right = 210.0
+offset_bottom = 484.0
+theme = ExtResource("6_5dn1n")
+text = "+"
+script = ExtResource("7_cs70e")
+
+[node name="SubtractAtomComponentButton" type="Button" parent="Electrons"]
+offset_left = 220.0
+offset_top = 453.0
+offset_right = 270.0
+offset_bottom = 485.0
+theme = ExtResource("6_5dn1n")
+text = "-"
+script = ExtResource("7_cs70e")
+
+[node name="AtomList" type="Node2D" parent="."]
+position = Vector2(971, 124)
+
+[node name="Panel" type="Panel" parent="AtomList"]
+offset_left = -69.0
+offset_top = -5.0
+offset_right = 41.0
+offset_bottom = 422.0
+theme_override_styles/panel = ExtResource("10_ly6pu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AtomList"]
+offset_left = -57.0
+offset_top = 7.0
+offset_right = 27.0
+offset_bottom = 409.0
+theme_override_fonts/normal_font = ExtResource("4_np5r3")
+theme_override_fonts/bold_font = ExtResource("4_np5r3")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]Your Atoms:[/b]
+
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+[Atom]
+"
+horizontal_alignment = 1
+
+[node name="ResetAtomButton" type="Button" parent="."]
+offset_left = 834.0
+offset_top = 35.0
+offset_right = 949.0
+offset_bottom = 85.0
+theme = ExtResource("6_5dn1n")
+text = "Reset Atom"
+
+[node name="MakeAtomButton" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 35.0
+offset_right = 468.0
+offset_bottom = 85.0
+theme = ExtResource("6_5dn1n")
+text = "Make Atom"
+
+[node name="DebugButton" type="Button" parent="."]
+visible = false
+offset_left = 541.0
+offset_top = 516.0
+offset_right = 689.0
+offset_bottom = 547.0
+text = "Enable Next Stage"
+script = ExtResource("11_dvb2t")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D"]
+offset_left = 292.0
+offset_top = 327.0
+offset_right = 614.0
+offset_bottom = 332.0
+rotation = 0.0101128
+color = Color(0, 0.658824, 0.952941, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D"]
+offset_left = 294.0
+offset_top = 445.0
+offset_right = 662.0
+offset_bottom = 450.0
+rotation = -0.0974476
+color = Color(0, 0.658824, 0.952941, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D"]
+offset_left = 292.0
+offset_top = 443.0
+offset_right = 587.0
+offset_bottom = 448.0
+rotation = -0.307251
+color = Color(0, 0.658824, 0.952941, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D"]
+offset_left = 291.0
+offset_top = 206.0
+offset_right = 639.0
+offset_bottom = 211.0
+rotation = 0.219462
+color = Color(0, 0.658824, 0.952941, 1)
+
+[connection signal="pressed" from="Protons/AddAtomComponentButton2" to="Protons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Protons/SubtractAtomComponentButton" to="Protons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="Neutrons/AddAtomComponentButton2" to="Neutrons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Neutrons/SubtractAtomComponentButton" to="Neutrons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="Electrons/AddAtomComponentButton2" to="Electrons/AddAtomComponentButton2" method="_on_add_button_pressed"]
+[connection signal="pressed" from="Electrons/SubtractAtomComponentButton" to="Electrons/SubtractAtomComponentButton" method="_on_subtract_button_pressed"]
+[connection signal="pressed" from="ResetAtomButton" to="." method="_on_reset_atom_button_pressed"]
+[connection signal="pressed" from="MakeAtomButton" to="." method="create_atom"]
+[connection signal="pressed" from="DebugButton" to="DebugButton" method="_on_pressed_molecule_maker"]

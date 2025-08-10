@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgnq4u46sfole"]
+
+[ext_resource type="Script" path="res://scripts/molecule_maker.gd" id="1_s062p"]
+[ext_resource type="Texture2D" uid="uid://brqyl7tb83v1y" path="res://assets/art/moleculemakerbgtemp.png" id="2_ytkcq"]
+[ext_resource type="Script" uid="uid://c5ixkdlesiqg5" path="res://scripts/debug_button.gd" id="3_2wf33"]
+
+[node name="MoleculeMaker" type="Node2D"]
+script = ExtResource("1_s062p")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+offset_left = -22.0
+offset_top = -91.0
+offset_right = 1514.0
+offset_bottom = 933.0
+scale = Vector2(0.859226, 0.859226)
+texture = ExtResource("2_ytkcq")
+
+[node name="DebugButton" type="Button" parent="."]
+visible = false
+offset_left = 585.0
+offset_top = 35.0
+offset_right = 733.0
+offset_bottom = 66.0
+text = "Enable Next Stage"
+script = ExtResource("3_2wf33")
+
+[connection signal="pressed" from="DebugButton" to="DebugButton" method="_on_pressed_synthesis_station"]

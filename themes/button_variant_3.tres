@@ -1,0 +1,70 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cbjgpekx1hw3m"]
+
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="1_akaaf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chg43"]
+content_margin_left = 30.0
+bg_color = Color(0.57, 0.57, 0.57, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r77uv"]
+content_margin_left = 30.0
+bg_color = Color(0.2387, 0.61061, 0.77, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nqmc"]
+content_margin_left = 30.0
+bg_color = Color(0.450706, 0.723269, 0.840629, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7plkq"]
+content_margin_left = 30.0
+bg_color = Color(0.177, 0.4661, 0.59, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 4
+Button/constants/line_spacing = 20
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 60
+Button/fonts/font = ExtResource("1_akaaf")
+Button/styles/disabled = SubResource("StyleBoxFlat_chg43")
+Button/styles/hover = SubResource("StyleBoxFlat_r77uv")
+Button/styles/normal = SubResource("StyleBoxFlat_4nqmc")
+Button/styles/pressed = SubResource("StyleBoxFlat_7plkq")

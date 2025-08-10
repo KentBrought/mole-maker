@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bc463cnh1wi1g"]
+
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="1_2nl0m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lm6i"]
+bg_color = Color(0.57, 0.57, 0.57, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70x4i"]
+bg_color = Color(1, 0.733333, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nl0m"]
+bg_color = Color(0.996078, 0.831373, 0.188235, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1u7ln"]
+bg_color = Color(0.984314, 0.588235, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_2nl0m")
+Button/styles/disabled = SubResource("StyleBoxFlat_1lm6i")
+Button/styles/hover = SubResource("StyleBoxFlat_70x4i")
+Button/styles/normal = SubResource("StyleBoxFlat_2nl0m")
+Button/styles/pressed = SubResource("StyleBoxFlat_1u7ln")

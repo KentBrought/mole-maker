@@ -1,0 +1,229 @@
+[gd_scene load_steps=10 format=3 uid="uid://csaibb48p6fcc"]
+
+[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/art/circle.png" id="1_7v56b"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_qst7n"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="3_vsk7q"]
+[ext_resource type="Script" uid="uid://ddkyvcartl8tt" path="res://scripts/guess_buttons.gd" id="4_n4otl"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="5_sec6g"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="6_xvvhq"]
+[ext_resource type="Texture2D" uid="uid://m1i46obw5w1v" path="res://assets/art/sparkle.png" id="7_jcu87"]
+[ext_resource type="Script" path="res://scripts/success_button.gd" id="8_5dw8d"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fbuuf"]
+particle_flag_disable_z = true
+angle_min = -45.0
+angle_max = 45.0
+spread = 180.0
+initial_velocity_min = 40.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.4
+
+[node name="SynthesisQuiz" type="Node2D"]
+
+[node name="Ingredient1" type="Node2D" parent="."]
+position = Vector2(401, 302)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient1"]
+modulate = Color(0.132742, 0.8539, 0.296264, 1)
+position = Vector2(-1, -2)
+texture = ExtResource("1_7v56b")
+
+[node name="Label2" type="Label" parent="Ingredient1"]
+offset_left = -45.0
+offset_top = -17.0
+offset_right = 46.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qst7n")
+theme_override_font_sizes/font_size = 30
+text = "H2"
+horizontal_alignment = 1
+
+[node name="Ingredient2" type="Node2D" parent="."]
+position = Vector2(848, 302)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ingredient2"]
+modulate = Color(0.0631161, 0.435643, 0.906755, 1)
+position = Vector2(2, -2)
+texture = ExtResource("1_7v56b")
+
+[node name="Label" type="Label" parent="Ingredient2"]
+offset_left = -29.0
+offset_top = -18.0
+offset_right = 47.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qst7n")
+theme_override_font_sizes/font_size = 30
+text = "O2"
+horizontal_alignment = 1
+
+[node name="Result1" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(501, 300)
+
+[node name="Sprite2D" type="Sprite2D" parent="Result1"]
+modulate = Color(0.0936, 0.72, 0.44856, 1)
+position = Vector2(2, -2)
+texture = ExtResource("1_7v56b")
+
+[node name="Label" type="Label" parent="Result1"]
+offset_left = -42.0
+offset_top = -16.0
+offset_right = 48.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qst7n")
+theme_override_font_sizes/font_size = 30
+text = "H2O"
+horizontal_alignment = 1
+
+[node name="Result2" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(750, 300)
+
+[node name="Sprite2D" type="Sprite2D" parent="Result2"]
+modulate = Color(0.197572, 0.742062, 0.767917, 1)
+position = Vector2(2, -2)
+texture = ExtResource("1_7v56b")
+
+[node name="Label" type="Label" parent="Result2"]
+offset_left = -25.0
+offset_top = -18.0
+offset_right = 57.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qst7n")
+theme_override_font_sizes/font_size = 30
+text = "H2O"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="QuestionOverlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_right = 1320.0
+offset_bottom = 752.0
+
+[node name="Panel2" type="Panel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 179.0
+offset_right = 957.0
+offset_bottom = 493.0
+theme_override_styles/panel = ExtResource("3_vsk7q")
+
+[node name="QuestionText" type="RichTextLabel" parent="QuestionOverlay"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 215.0
+offset_right = 938.0
+offset_bottom = 469.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_qst7n")
+theme_override_fonts/bold_font = ExtResource("2_qst7n")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]You're almost there![/b]
+
+Before we make H2O, let's think... You just combined hydrogen and oxygen. What kind of molecule is water (H2O)?
+
+Make a guess!"
+horizontal_alignment = 1
+
+[node name="GuessButtons" type="HBoxContainer" parent="QuestionOverlay"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 0
+offset_left = 381.0
+offset_top = 384.0
+offset_right = 881.0
+offset_bottom = 434.0
+script = ExtResource("4_n4otl")
+
+[node name="GuessButton1" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_sec6g")
+text = "Diatomic"
+
+[node name="GuessButton2" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_sec6g")
+text = "Organic"
+
+[node name="GuessButton3" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_sec6g")
+text = "Compound "
+
+[node name="GuessButton4" type="Button" parent="QuestionOverlay/GuessButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_sec6g")
+text = "Noble gas"
+
+[node name="CloseOverlayButton" type="Button" parent="QuestionOverlay"]
+visible = false
+layout_mode = 0
+offset_left = 579.0
+offset_top = 384.0
+offset_right = 679.0
+offset_bottom = 434.0
+theme = ExtResource("5_sec6g")
+text = "Lets go!"
+script = ExtResource("6_xvvhq")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = ExtResource("7_jcu87")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_fbuuf")
+
+[node name="SuccessMessage" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SuccessMessage"]
+offset_left = 461.0
+offset_top = 79.0
+offset_right = 795.0
+offset_bottom = 181.0
+theme_override_fonts/normal_font = ExtResource("2_qst7n")
+theme_override_fonts/bold_font = ExtResource("2_qst7n")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Congratulations![/b]
+
+ You made H2O successfully."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="SuccessMessage"]
+offset_left = 538.0
+offset_top = 427.0
+offset_right = 738.0
+offset_bottom = 527.0
+theme = ExtResource("5_sec6g")
+text = "Yay!
+LEVEL COMPLETE"
+script = ExtResource("8_5dw8d")
+
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton1" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton2" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton3" to="QuestionOverlay/GuessButtons" method="_on_correct_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/GuessButtons/GuessButton4" to="QuestionOverlay/GuessButtons" method="_on_incorrect_guess_button_pressed"]
+[connection signal="pressed" from="QuestionOverlay/CloseOverlayButton" to="QuestionOverlay/CloseOverlayButton" method="_on_pressed"]
+[connection signal="pressed" from="SuccessMessage/Button" to="SuccessMessage/Button" method="_on_pressed"]

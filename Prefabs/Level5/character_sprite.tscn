@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://djr41afmafioe"]
+
+[ext_resource type="Texture2D" uid="uid://bkevib7q74uhr" path="res://assets/art/molenpc5.png" id="1_h84vh"]
+
+[node name="CharacterSprite" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_h84vh")

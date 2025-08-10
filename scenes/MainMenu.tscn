@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=3 uid="uid://sfbo0v7vkcy5"]
+
+[ext_resource type="Script" uid="uid://clsksg8t2awuw" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://6ltboip8yqbm" path="res://assets/art/mainmenubackground.png" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="3_bqqt6"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="4_8ln24"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="5_rtw2f"]
+[ext_resource type="PackedScene" uid="uid://b151sb0d1ixnj" path="res://Prefabs/options_overlay.tscn" id="6_826wr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+bg_color = Color(0.568627, 0.568627, 0.568627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(1, 0.733333, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.996078, 0.831373, 0.188235, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
+bg_color = Color(0.984314, 0.588235, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_tbmy8"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("3_bqqt6")
+Button/styles/disabled = SubResource("StyleBoxFlat_bqqt6")
+Button/styles/hover = SubResource("StyleBoxFlat_wu84c")
+Button/styles/normal = SubResource("StyleBoxFlat_8ln24")
+Button/styles/pressed = SubResource("StyleBoxFlat_rtw2f")
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -63.0
+offset_right = 1280.0
+offset_bottom = 790.0
+texture = ExtResource("1_ekxnf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = -1
+anchor_top = 0.778
+anchor_right = 1.0
+anchor_bottom = 0.778
+offset_left = 100.0
+offset_top = -66.16
+offset_right = -100.0
+offset_bottom = 55.84
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_tbmy8")
+text = "PLAY
+GAME"
+
+[node name="HowToPlayButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_tbmy8")
+text = "How To Play"
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_tbmy8")
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_tbmy8")
+text = "Credits
+"
+
+[node name="HowToPlayOverlay" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/HowToPlayOverlay"]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -83.0
+offset_right = 1330.0
+offset_bottom = 817.0
+
+[node name="OverlayBackground" type="Panel" parent="CanvasLayer/HowToPlayOverlay"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 95.0
+offset_right = 1072.0
+offset_bottom = 581.0
+theme_override_styles/panel = ExtResource("4_8ln24")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HowToPlayOverlay"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 129.0
+offset_right = 1037.0
+offset_bottom = 552.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_bqqt6")
+theme_override_fonts/bold_font = ExtResource("3_bqqt6")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 60
+bbcode_enabled = true
+text = "[b]Welcome to Mole Maker![/b]
+
+In this game you will combine atoms to make new chemical compounds for the many mole people of Moleville.
+
+- Click the \"Periodic Table\" button at the top right to access one
+- Click the \"Hint\" button at the top right if you get stuck                
+
+Good luck!"
+horizontal_alignment = 1
+
+[node name="CloseOverlayButton" type="Button" parent="CanvasLayer/HowToPlayOverlay"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 498.0
+offset_right = 681.0
+offset_bottom = 548.0
+theme = ExtResource("5_rtw2f")
+text = "Close
+"
+
+[node name="OptionsOverlay" parent="CanvasLayer" instance=ExtResource("6_826wr")]
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HowToPlayOverlay/CloseOverlayButton" to="." method="_on_close_overlay_button_pressed"]

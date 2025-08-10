@@ -1,0 +1,202 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsgbl1hsrl8bb"]
+
+[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/art/circle.png" id="1_wp1ij"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_eeaqi"]
+[ext_resource type="Script" uid="uid://67ix1yx43e2d" path="res://scripts/source.gd" id="3_yiho8"]
+[ext_resource type="Script" uid="uid://djhet0xxt0kqu" path="res://scripts/drop_spot.gd" id="4_lv51e"]
+
+[node name="DragAndDrop" type="Node2D"]
+
+[node name="H3PO4EquationTemplate" type="Node2D" parent="."]
+position = Vector2(102, 126)
+scale = Vector2(0.5, 0.5)
+
+[node name="OTemplate2" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(994, 438)
+scale = Vector2(1.93, 1.93)
+texture = ExtResource("1_wp1ij")
+
+[node name="OTemplate" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(1262, 436)
+scale = Vector2(1.93, 1.93)
+texture = ExtResource("1_wp1ij")
+
+[node name="HTemplate1" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(476, 192)
+scale = Vector2(1.93, 1.93)
+texture = ExtResource("1_wp1ij")
+
+[node name="HTemplate3" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(764, 184)
+scale = Vector2(1.93, 1.93)
+texture = ExtResource("1_wp1ij")
+
+[node name="DiagramComponents" type="Node2D" parent="H3PO4EquationTemplate"]
+
+[node name="Sprite2D5" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(960, 558)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D6" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1034, 554)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D7" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(956, 320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D8" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1036, 320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D1" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1224, 558)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D2" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1301, 554.8)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D3" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1218, 318)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Sprite2D4" type="Sprite2D" parent="H3PO4EquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1302, 316)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wp1ij")
+
+[node name="Label5" type="Label" parent="H3PO4EquationTemplate/DiagramComponents"]
+offset_left = 1100.0
+offset_top = 380.0
+offset_right = 1205.0
+offset_bottom = 609.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 100
+text = "="
+
+[node name="Label6" type="Label" parent="H3PO4EquationTemplate/DiagramComponents"]
+offset_left = 590.0
+offset_top = 117.0
+offset_right = 695.0
+offset_bottom = 346.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 100
+text = "-"
+
+[node name="Ingredient3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 79.0
+offset_top = 116.0
+offset_right = 172.0
+offset_bottom = 211.0
+script = ExtResource("3_yiho8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient3"]
+modulate = Color(0.782708, 0.64325, 0.917552, 1)
+position = Vector2(45, 48)
+texture = ExtResource("1_wp1ij")
+
+[node name="Label2" type="Label" parent="Ingredient3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0215054
+anchor_right = 0.0215054
+offset_left = 33.0
+offset_top = 32.0
+offset_right = 103.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 30
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ingredient4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 78.0
+offset_top = 229.0
+offset_right = 173.0
+offset_bottom = 319.0
+script = ExtResource("3_yiho8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient4"]
+modulate = Color(0.944841, 0.633487, 0.341924, 1)
+position = Vector2(46, 45)
+texture = ExtResource("1_wp1ij")
+
+[node name="Label2" type="Label" parent="Ingredient4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0421053
+anchor_right = 0.0421053
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 102.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 30
+text = "O"
+metadata/_edit_use_anchors_ = true
+
+[node name="DropSpots" type="Node2D" parent="."]
+
+[node name="O" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 686.0
+offset_top = 297.0
+offset_right = 786.0
+offset_bottom = 395.0
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient4"
+
+[node name="H1" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 293.0
+offset_top = 171.0
+offset_right = 393.0
+offset_bottom = 271.0
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient3"
+
+[node name="H3" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 437.0
+offset_top = 166.0
+offset_right = 538.0
+offset_bottom = 267.0
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient3"
+
+[node name="O2" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 553.0
+offset_top = 297.0
+offset_right = 651.0
+offset_bottom = 395.0
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient4"

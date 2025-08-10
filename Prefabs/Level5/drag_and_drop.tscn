@@ -1,0 +1,333 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmb5aawfjr52e"]
+
+[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/art/circle.png" id="1_gqx7l"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_nmuhc"]
+[ext_resource type="Script" uid="uid://67ix1yx43e2d" path="res://scripts/source.gd" id="3_78pet"]
+[ext_resource type="Script" uid="uid://djhet0xxt0kqu" path="res://scripts/drop_spot.gd" id="4_x7mg5"]
+
+[node name="DragAndDrop" type="Node2D"]
+
+[node name="H2OEquationTemplate" type="Node2D" parent="."]
+position = Vector2(-34, -27)
+
+[node name="OTemplate" type="Sprite2D" parent="H2OEquationTemplate"]
+position = Vector2(624, 187.8)
+texture = ExtResource("1_gqx7l")
+
+[node name="HTemplate1" type="Sprite2D" parent="H2OEquationTemplate"]
+position = Vector2(441, 184.8)
+texture = ExtResource("1_gqx7l")
+
+[node name="HTemplate2" type="Sprite2D" parent="H2OEquationTemplate"]
+position = Vector2(809, 190.8)
+texture = ExtResource("1_gqx7l")
+
+[node name="DiagramComponents" type="Node2D" parent="H2OEquationTemplate"]
+
+[node name="Sprite2D1" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(599, 256.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D2" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(649, 256.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(599, 116.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D4" type="Sprite2D" parent="H2OEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(649, 116.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label5" type="Label" parent="H2OEquationTemplate/DiagramComponents"]
+offset_left = 687.0
+offset_top = 119.8
+offset_right = 792.0
+offset_bottom = 348.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 100
+text = "-"
+
+[node name="Label6" type="Label" parent="H2OEquationTemplate/DiagramComponents"]
+offset_left = 508.0
+offset_top = 119.8
+offset_right = 613.0
+offset_bottom = 348.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 100
+text = "-"
+
+[node name="NaClEquationTemplate" type="Node2D" parent="."]
+position = Vector2(-148, -38)
+
+[node name="NaTemplate" type="Sprite2D" parent="NaClEquationTemplate"]
+position = Vector2(493, 438.8)
+texture = ExtResource("1_gqx7l")
+
+[node name="ClTemplate" type="Sprite2D" parent="NaClEquationTemplate"]
+position = Vector2(757, 438.8)
+texture = ExtResource("1_gqx7l")
+
+[node name="DiagramComponents" type="Node2D" parent="NaClEquationTemplate"]
+position = Vector2(125, 160)
+
+[node name="Sprite2D" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(604, 196.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D2" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(654, 196.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D3" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(714, 266.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D4" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(714, 306.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D5" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(604, 356.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D6" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(654, 356.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D7" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(554, 266.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Sprite2D8" type="Sprite2D" parent="NaClEquationTemplate/DiagramComponents"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(554, 306.8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
+offset_left = 409.0
+offset_top = 196.8
+offset_right = 449.0
+offset_bottom = 254.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 50
+text = "+"
+
+[node name="Label2" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
+offset_left = 695.0
+offset_top = 196.8
+offset_right = 735.0
+offset_bottom = 254.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 50
+text = "-"
+
+[node name="Label3" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
+offset_left = 459.0
+offset_top = 166.8
+offset_right = 536.0
+offset_bottom = 395.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 200
+text = "["
+
+[node name="Label4" type="Label" parent="NaClEquationTemplate/DiagramComponents"]
+offset_left = 744.0
+offset_top = 166.8
+offset_right = 821.0
+offset_bottom = 395.8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 200
+text = "]"
+
+[node name="Ingredient1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 74.0
+offset_top = 109.0
+offset_right = 174.0
+offset_bottom = 207.0
+script = ExtResource("3_78pet")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient1"]
+modulate = Color(0.132742, 0.8539, 0.296264, 1)
+position = Vector2(50, 49)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label2" type="Label" parent="Ingredient1"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 33.0
+offset_right = 104.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 30
+text = "Na"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ingredient2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 75.0
+offset_top = 220.0
+offset_right = 176.0
+offset_bottom = 317.0
+script = ExtResource("3_78pet")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient2"]
+modulate = Color(0.434453, 0.748275, 0.969999, 1)
+position = Vector2(49, 48)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label2" type="Label" parent="Ingredient2"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 34.0
+offset_right = 105.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 30
+text = "Cl"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ingredient3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 79.0
+offset_top = 330.0
+offset_right = 172.0
+offset_bottom = 425.0
+script = ExtResource("3_78pet")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient3"]
+modulate = Color(0.782708, 0.64325, 0.917552, 1)
+position = Vector2(45, 48)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label2" type="Label" parent="Ingredient3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0215054
+anchor_right = 0.0215054
+offset_left = 33.0
+offset_top = 32.0
+offset_right = 103.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 30
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="Ingredient4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 78.0
+offset_top = 443.0
+offset_right = 173.0
+offset_bottom = 533.0
+script = ExtResource("3_78pet")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient4"]
+modulate = Color(0.944841, 0.633487, 0.341924, 1)
+position = Vector2(46, 45)
+texture = ExtResource("1_gqx7l")
+
+[node name="Label2" type="Label" parent="Ingredient4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0421053
+anchor_right = 0.0421053
+offset_left = 32.0
+offset_top = 31.0
+offset_right = 102.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nmuhc")
+theme_override_font_sizes/font_size = 30
+text = "O"
+metadata/_edit_use_anchors_ = true
+
+[node name="DropSpots" type="Node2D" parent="."]
+
+[node name="H1" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 363.0
+offset_top = 109.8
+offset_right = 455.0
+offset_bottom = 204.8
+script = ExtResource("4_x7mg5")
+correct_name = "Ingredient3"
+
+[node name="O" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 544.0
+offset_top = 114.8
+offset_right = 639.0
+offset_bottom = 212.8
+script = ExtResource("4_x7mg5")
+correct_name = "Ingredient4"
+
+[node name="H2" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 730.0
+offset_top = 114.8
+offset_right = 828.0
+offset_bottom = 214.8
+script = ExtResource("4_x7mg5")
+correct_name = "Ingredient3"
+
+[node name="Na" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 295.0
+offset_top = 352.8
+offset_right = 397.0
+offset_bottom = 449.8
+script = ExtResource("4_x7mg5")
+correct_name = "Ingredient1"
+
+[node name="Cl" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 560.0
+offset_top = 353.8
+offset_right = 660.0
+offset_bottom = 445.8
+script = ExtResource("4_x7mg5")
+correct_name = "Ingredient2"

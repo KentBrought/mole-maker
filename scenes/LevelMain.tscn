@@ -1,0 +1,567 @@
+[gd_scene load_steps=32 format=3 uid="uid://ckj04xs2msl6r"]
+
+[ext_resource type="Script" uid="uid://dmw7ead88nmeq" path="res://scripts/level_main.gd" id="1_8mxaj"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_wqqpw"]
+[ext_resource type="StyleBox" uid="uid://c6rykowjenwip" path="res://themes/menu_panel_variant_1_style_box.tres" id="3_7l2ql"]
+[ext_resource type="Theme" uid="uid://ceyd5jq3dbr2c" path="res://themes/button_variant_2.tres" id="4_x0gfo"]
+[ext_resource type="Texture2D" uid="uid://drdxldt5ox1cr" path="res://assets/art/lock.png" id="5_t23ro"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="6_t5hfu"]
+[ext_resource type="Script" uid="uid://dgjybt40nolb7" path="res://scripts/close_parent_button.gd" id="7_7l2ql"]
+[ext_resource type="Texture2D" uid="uid://b3igypxwpe1tt" path="res://assets/art/figmaPeriodicTable.png" id="7_ugd7i"]
+[ext_resource type="Texture2D" uid="uid://o25rtjl1m71c" path="res://assets/art/periodictablebutton.png" id="8_4ohlc"]
+[ext_resource type="StyleBox" uid="uid://c0j65wo0rxbma" path="res://themes/menu_panel_variant_2style_box.tres" id="8_wqqpw"]
+[ext_resource type="Texture2D" uid="uid://dxbslmjfqke6v" path="res://assets/art/pressedperiodictablebutton.png" id="9_amrb8"]
+[ext_resource type="Texture2D" uid="uid://c14kaug8121f2" path="res://assets/art/hoverperiodictablebutton.png" id="10_ay76c"]
+[ext_resource type="Texture2D" uid="uid://if5qwvalvorr" path="res://assets/art/helpbutton.png" id="11_brpn3"]
+[ext_resource type="Texture2D" uid="uid://c4m53on4njbrj" path="res://assets/art/pressedhelpbutton.png" id="12_b8tex"]
+[ext_resource type="Texture2D" uid="uid://8ma36l1du3c7" path="res://assets/art/hoverhelpbutton.png" id="13_64wss"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="16_4ohlc"]
+[ext_resource type="PackedScene" uid="uid://b151sb0d1ixnj" path="res://Prefabs/options_overlay.tscn" id="17_amrb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qixek"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfrcl"]
+bg_color = Color(0.568627, 0.568627, 0.568627, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc60b"]
+bg_color = Color(0, 0.410667, 0.56, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eugj0"]
+bg_color = Color(0.0823529, 0.501961, 0.654902, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edbe2"]
+bg_color = Color(0, 0.33, 0.45, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_38deu"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("2_wqqpw")
+Button/icons/icon = null
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_vc60b")
+Button/styles/normal = SubResource("StyleBoxFlat_eugj0")
+Button/styles/pressed = SubResource("StyleBoxFlat_edbe2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyap8"]
+bg_color = Color(0.124575, 0.55, 0.0495, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3k3ue"]
+bg_color = Color(0.188235, 0.654902, 0.0901961, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xkkt"]
+bg_color = Color(0.0783334, 0.47, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_tt0yq"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("2_wqqpw")
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_dyap8")
+Button/styles/normal = SubResource("StyleBoxFlat_3k3ue")
+Button/styles/pressed = SubResource("StyleBoxFlat_2xkkt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik0s5"]
+bg_color = Color(0.3565, 0.155, 0.62, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40qvd"]
+bg_color = Color(0.419608, 0.270588, 0.611765, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ftmt"]
+bg_color = Color(0.26724, 0.0816, 0.51, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_wvj7i"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/constants/outline_size = 30
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("2_wqqpw")
+Button/styles/disabled = SubResource("StyleBoxFlat_wfrcl")
+Button/styles/hover = SubResource("StyleBoxFlat_ik0s5")
+Button/styles/normal = SubResource("StyleBoxFlat_40qvd")
+Button/styles/pressed = SubResource("StyleBoxFlat_5ftmt")
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_8mxaj")
+
+[node name="StageContainer" type="Node" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="TicketSpawn" type="Panel" parent="UILayer"]
+anchors_preset = -1
+anchor_top = 0.0972222
+anchor_right = 0.16875
+anchor_bottom = 0.497222
+offset_left = 1027.0
+offset_top = 49.0
+offset_right = 1063.0
+offset_bottom = 110.0
+scale = Vector2(1, 1.218)
+theme_override_styles/panel = SubResource("StyleBoxFlat_qixek")
+metadata/_edit_use_anchors_ = true
+
+[node name="TicketText" type="RichTextLabel" parent="UILayer/TicketSpawn"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 242.0
+offset_bottom = 336.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[Ticket Text]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StageNavBar" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LabLineButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 580.0
+offset_right = 310.0
+offset_bottom = 705.0
+theme = ExtResource("4_x0gfo")
+text = "Lab Line"
+metadata/_edit_use_anchors_ = true
+
+[node name="AtomAssemblerButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 580.0
+offset_right = 610.0
+offset_bottom = 705.0
+theme = SubResource("Theme_38deu")
+disabled = true
+text = "Atom
+Assembler"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/AtomAssemblerButton"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_t23ro")
+expand_mode = 1
+
+[node name="MoleculeMakerButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 580.0
+offset_right = 910.0
+offset_bottom = 705.0
+theme = SubResource("Theme_tt0yq")
+disabled = true
+text = "Molecule
+Maker"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/MoleculeMakerButton"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_t23ro")
+expand_mode = 1
+
+[node name="SynthesisStationButton" type="Button" parent="UILayer/StageNavBar"]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 580.0
+offset_right = 1210.0
+offset_bottom = 705.0
+theme = SubResource("Theme_wvj7i")
+disabled = true
+text = "Synthesis
+Station"
+metadata/_edit_use_anchors_ = true
+
+[node name="Lock" type="TextureRect" parent="UILayer/StageNavBar/SynthesisStationButton"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 115.0
+mouse_filter = 2
+texture = ExtResource("5_t23ro")
+expand_mode = 1
+
+[node name="TopLeftMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBackground2" type="Panel" parent="UILayer/TopLeftMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 0.975
+offset_left = -50.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/panel = ExtResource("3_7l2ql")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.175
+anchor_top = -0.275
+anchor_right = -0.175
+anchor_bottom = -0.275
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 135.0
+offset_bottom = 75.0
+scale = Vector2(1.37265, 1.37265)
+theme = ExtResource("6_t5hfu")
+text = "Level Select"
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionsButton" type="Button" parent="UILayer/TopLeftMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.725
+anchor_top = -0.275
+anchor_right = 0.725
+anchor_bottom = -0.275
+offset_left = 150.0
+offset_top = 25.0
+offset_right = 250.0
+offset_bottom = 75.0
+scale = Vector2(1.38023, 1.38023)
+theme = ExtResource("6_t5hfu")
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="TopRightMenu" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="MenuBackground3" type="Panel" parent="UILayer/TopRightMenu"]
+layout_mode = 0
+offset_left = 990.0
+offset_top = -33.0
+offset_right = 1340.0
+offset_bottom = 97.0
+theme_override_styles/panel = ExtResource("3_7l2ql")
+metadata/_edit_use_anchors_ = true
+
+[node name="PeriodicTableButton" type="TextureButton" parent="UILayer/TopRightMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.3
+anchor_top = -0.425
+anchor_right = 2.3
+anchor_bottom = 1.45
+offset_left = 1030.0
+offset_top = 25.0
+offset_right = 1170.0
+offset_bottom = 75.0
+scale = Vector2(0.612269, 0.610058)
+theme = ExtResource("6_t5hfu")
+texture_normal = ExtResource("8_4ohlc")
+texture_pressed = ExtResource("9_amrb8")
+texture_hover = ExtResource("10_ay76c")
+metadata/_edit_use_anchors_ = true
+
+[node name="HintButton" type="TextureButton" parent="UILayer/TopRightMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0750031
+anchor_top = -0.45
+anchor_right = 1.4
+anchor_bottom = 1.425
+offset_left = 1195.0
+offset_top = 25.0
+offset_right = 1254.0
+offset_bottom = 75.0
+scale = Vector2(0.610682, 0.610682)
+theme = ExtResource("6_t5hfu")
+texture_normal = ExtResource("11_brpn3")
+texture_pressed = ExtResource("12_b8tex")
+texture_hover = ExtResource("13_64wss")
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Node2D" parent="UILayer"]
+script = ExtResource("16_4ohlc")
+
+[node name="UpdateTimer" type="Timer" parent="UILayer/Timer"]
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="UILayer/Timer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1007.0
+offset_top = 20.0
+offset_right = 1111.0
+offset_bottom = 75.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wqqpw")
+theme_override_font_sizes/font_size = 30
+text = "0:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PeriodicTableOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
+offset_right = 1285.0
+offset_bottom = 759.0
+
+[node name="PeriodicTableBackground" type="Panel" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 71.0
+offset_right = 1198.0
+offset_bottom = 671.0
+theme_override_styles/panel = ExtResource("8_wqqpw")
+
+[node name="ClosePeriodicTableButton" type="Button" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 112.0
+offset_right = 1164.0
+offset_bottom = 162.0
+theme = ExtResource("6_t5hfu")
+text = "Close"
+script = ExtResource("7_7l2ql")
+
+[node name="PeriodicTableTextureRect" type="TextureRect" parent="UILayer/PeriodicTableOverlay"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 96.0
+offset_right = 10147.0
+offset_bottom = 6137.0
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("7_ugd7i")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HintOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UILayer/HintOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HintBackground" type="Panel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 80.0
+offset_right = 1005.0
+offset_bottom = 643.0
+theme_override_styles/panel = ExtResource("8_wqqpw")
+
+[node name="CloseHintButton" type="Button" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 112.0
+offset_right = 978.0
+offset_bottom = 162.0
+theme = ExtResource("6_t5hfu")
+text = "Close"
+script = ExtResource("7_7l2ql")
+
+[node name="Header" type="RichTextLabel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 109.0
+offset_right = 870.0
+offset_bottom = 160.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[u][b]Hint:[/b][/u]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UILayer/HintOverlay"]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 180.0
+offset_right = 979.0
+offset_bottom = 611.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_wqqpw")
+theme_override_fonts/bold_font = ExtResource("2_wqqpw")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b] Lab Line: [/b]
+Talk to the person at the counter and see what they need!
+
+[b] Atom Assembler: [/b]
+To move to the next stage, you need to make the atoms on the left side of the chemical equation on the ticket. Use the periodic table to select the correct number of protons, neutrons, and electrons for the elements you need.
+
+To add protons/neutrons/electrons to your atom, type the number you want to add and click the \"Add\" button. The counter will update. Click \"Reset\" to reset the counters, and \"Make Atom\" to try combining the components recorded by the counters into an element atom.
+
+NOTE: For our purposes here, you only need to make neutral-charge, standard mass isotopes.
+
+[b] Molecule Maker: [/b]
+Place the atoms in their correct places on the lewis diagram.
+Check the periodic table for each element's number of valence electrons if you need some help!
+
+[b] Synthesis Station: [/b]
+Make a guess at what the \"?\" in the ticket equation will be, then combine your molecules and see what happens!"
+
+[node name="OptionsOverlay" parent="UILayer" instance=ExtResource("17_amrb8")]
+
+[connection signal="pressed" from="UILayer/TopLeftMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="UILayer/TopLeftMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="UILayer/TopRightMenu/PeriodicTableButton" to="." method="_on_periodic_table_button_pressed"]
+[connection signal="pressed" from="UILayer/TopRightMenu/HintButton" to="." method="_on_hint_button_pressed"]
+[connection signal="timeout" from="UILayer/Timer/UpdateTimer" to="UILayer/Timer" method="_on_update_timer_timeout"]
+[connection signal="pressed" from="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" to="UILayer/PeriodicTableOverlay/ClosePeriodicTableButton" method="_on_pressed"]
+[connection signal="pressed" from="UILayer/HintOverlay/CloseHintButton" to="UILayer/HintOverlay/CloseHintButton" method="_on_pressed"]

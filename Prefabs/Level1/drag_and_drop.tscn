@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmb5aawfjr52a"]
+
+[ext_resource type="Texture2D" uid="uid://cic0dipab7gi4" path="res://assets/art/circle.png" id="1_wp1ij"]
+[ext_resource type="FontFile" uid="uid://c1cpubp5x6y1l" path="res://fonts/LilitaOne-Regular.ttf" id="2_eeaqi"]
+[ext_resource type="Script" uid="uid://67ix1yx43e2d" path="res://scripts/source.gd" id="3_yiho8"]
+[ext_resource type="Script" uid="uid://djhet0xxt0kqu" path="res://scripts/drop_spot.gd" id="4_lv51e"]
+
+[node name="DragAndDrop" type="Node2D"]
+
+[node name="H3PO4EquationTemplate" type="Node2D" parent="."]
+position = Vector2(102, 126)
+scale = Vector2(0.5, 0.5)
+
+[node name="HTemplate1" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(734, 194)
+scale = Vector2(1.55192, 1.55192)
+texture = ExtResource("1_wp1ij")
+
+[node name="HTemplate3" type="Sprite2D" parent="H3PO4EquationTemplate"]
+position = Vector2(966, 204)
+scale = Vector2(1.55192, 1.55192)
+texture = ExtResource("1_wp1ij")
+
+[node name="DiagramComponents" type="Node2D" parent="H3PO4EquationTemplate"]
+
+[node name="Label10" type="Label" parent="H3PO4EquationTemplate/DiagramComponents"]
+offset_left = 826.0
+offset_top = 128.0
+offset_right = 931.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 100
+text = "-"
+
+[node name="Ingredient3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 75.0
+offset_top = 142.0
+offset_right = 168.0
+offset_bottom = 237.0
+script = ExtResource("3_yiho8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ingredient3"]
+modulate = Color(0.782708, 0.64325, 0.917552, 1)
+position = Vector2(45, 48)
+scale = Vector2(0.851724, 0.851724)
+texture = ExtResource("1_wp1ij")
+
+[node name="Label2" type="Label" parent="Ingredient3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0215054
+anchor_right = 0.0215054
+offset_left = 33.0
+offset_top = 32.0
+offset_right = 103.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_eeaqi")
+theme_override_font_sizes/font_size = 30
+text = "H"
+metadata/_edit_use_anchors_ = true
+
+[node name="DropSpots" type="Node2D" parent="."]
+
+[node name="H1" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 425.0
+offset_top = 171.0
+offset_right = 477.0
+offset_bottom = 222.0
+scale = Vector2(2.13653, 2.13653)
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient3"
+
+[node name="H2" type="Control" parent="DropSpots"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 538.0
+offset_top = 177.0
+offset_right = 585.0
+offset_bottom = 224.0
+scale = Vector2(2.14006, 2.14006)
+script = ExtResource("4_lv51e")
+correct_name = "Ingredient3"

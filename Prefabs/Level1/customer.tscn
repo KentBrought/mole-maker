@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://0puyiupfuwga"]
+
+[ext_resource type="Texture2D" uid="uid://brbfpffrofjsd" path="res://assets/art/molenpc1.png" id="1_6v76t"]
+[ext_resource type="Theme" uid="uid://cjt1wgi2nnutb" path="res://themes/ChatBubbleTheme.tres" id="2_j8ysn"]
+[ext_resource type="Theme" uid="uid://bc463cnh1wi1g" path="res://themes/button_variant_1.tres" id="3_t8o4f"]
+
+[node name="Customer" type="Node2D"]
+
+[node name="CustomerSprite" type="Sprite2D" parent="."]
+position = Vector2(358, 324)
+scale = Vector2(0.305246, 0.305246)
+texture = ExtResource("1_6v76t")
+
+[node name="DialogueUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 13.0
+offset_top = -61.0
+offset_right = 53.0
+offset_bottom = -21.0
+
+[node name="DialogueLabel" type="Label" parent="DialogueUI"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 117.0
+offset_right = 703.0
+offset_bottom = 367.0
+theme = ExtResource("2_j8ysn")
+theme_override_font_sizes/font_size = 25
+text = "adssaads"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="DialogueButton" type="Button" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = -3.075
+anchor_right = 0.525
+anchor_bottom = -3.075
+offset_left = 476.0
+offset_top = 388.0
+offset_right = 626.0
+offset_bottom = 438.0
+theme = ExtResource("3_t8o4f")
+text = "Next"
+metadata/_edit_use_anchors_ = true
