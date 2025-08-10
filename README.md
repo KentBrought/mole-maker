@@ -1,4 +1,6 @@
-# Mole Maker [![Godot Badge](https://img.shields.io/badge/Engine-Godot-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
+# Mole Maker 
+
+[![Godot Badge](https://img.shields.io/badge/Engine-Godot-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 
 A molecule-building puzzler created for the **MIT CMS.590 Design and Development of Games for Learning** class.
 
