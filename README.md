@@ -1,16 +1,8 @@
-# Mole Maker
+# Mole Maker [![Godot Badge](https://img.shields.io/badge/Engine-Godot-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 
-[![Godot Badge](https://img.shields.io/badge/Engine-Godot-478cbf?style=for-the-badge&logo=godot-engine&logoColor=white)](https://godotengine.org/)
 A molecule-building puzzler created for the **MIT CMS.590 Design and Development of Games for Learning** class.
 
 [Play the latest build on itch.io](https://kbrought.itch.io/mole-maker)
-
-## Screenshots
-
-![Main Menu](assets/art/mainmenubackground.png)
-![Atom Assembler](assets/art/atomassemblerbackground.png)
-![Lab Level](assets/art/level1.png)
-![Periodic Table](assets/art/figmaPeriodicTable.png)
 
 ## Features
 
@@ -37,4 +29,4 @@ This repository hosts the complete source for Mole Maker. For a playable build a
 
 ---
 
-Made with ❤️ by the Mole Maker team.
+Made with ❤️ by the Mole Maker team for CMS.590.
